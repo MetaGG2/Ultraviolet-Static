@@ -119,9 +119,12 @@
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       const inputValue = urlParams.get('input');
-      document.getElementById('uv-address').textContent = inputValue;
 
-      document.getElementById('uv-form').submit();
+      if (inputValue != null) {
+        document.getElementById('uv-address').textContent = inputValue;
+
+        document.getElementById('uv-form').submit();
+      }
     </script>
   </body>
 </html>
